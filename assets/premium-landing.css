@@ -1479,3 +1479,137 @@ section, section[id] {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
+
+
+/* ==========================================================================
+   HERO & SOBRE VISUAL POLISH (ASPECT RATIO & SPACING FIX)
+   ========================================================================== */
+.hero {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid,
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-frame {
+  width: 100%;
+  max-width: 440px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.15);
+  background: #111;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: contrast(1.05) saturate(1.04) brightness(1.01);
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.sobre-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sobre-image-frame {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.1);
+  background: #111;
+}
+
+.sobre-image {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: contrast(1.04) grayscale(0.15);
+  transition: transform 0.4s ease;
+}
+
+.sobre-image:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+
+  .hero-grid,
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .hero-image-frame {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    max-height: 400px;
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .sobre-image-frame {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .sobre-image {
+    max-height: 380px;
+  }
+}
