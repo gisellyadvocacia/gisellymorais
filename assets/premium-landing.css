@@ -1613,3 +1613,58 @@ section, section[id] {
     max-height: 380px;
   }
 }
+
+
+
+/* ==========================================================================
+   HERO SPACING & BADGES OVERRIDE (NAVBAR CLEARANCE)
+   ========================================================================== */
+.hero {
+  padding-top: 140px !important;
+  padding-bottom: 80px !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-badges {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-bottom: 24px !important;
+}
+
+.hero-badges .badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.9rem !important;
+  color: var(--text-muted, #a1a1aa) !important;
+}
+
+.hero-badges .badge svg {
+  width: 18px !important;
+  height: 18px !important;
+  color: var(--gold, #d4af37) !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 110px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .hero-badges {
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-badges .badge {
+    font-size: 0.85rem !important;
+  }
+
+  .hero-badges .badge svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
